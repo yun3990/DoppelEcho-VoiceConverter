@@ -4,9 +4,9 @@ RVC 추론용 `.pth`를 도플 에코의 w-okada 호환 ONNX 규격으로 변환
 
 **시작:** ZIP 전체 압축 해제 → `ONNX Export.bat` → 처음 실행 시 설정 동의 → `.pth`와 `.onnx` 저장 위치 선택.
 
-**도플 에코에서는 RVC v1 모델을 권장합니다.** v2도 파일 변환은 가능하지만, 현재 게임에서 음성이 깨지는 현상이 있어 실험용으로만 사용하세요. 변환 검증 성공은 게임 내 음질 보장을 의미하지 않습니다.
+**도플 에코에서는 RVC v1 모델을 권장합니다.** v2도 변환할 수 있지만, 게임에서 속삭임이나 특정 음역대에 가벼운 음성 왜곡이 생길 수 있습니다. 업로드 전 해당 발성까지 직접 들어보고 확인하세요. 변환 검증 성공은 게임 내 음질 보장을 의미하지 않습니다.
 
-**RVC v1 is recommended for Doppel Echo.** v2 export is available for experimental use, but audio distortion has been observed in the current game. Passing export validation does not guarantee in-game audio quality.
+**RVC v1 is recommended for Doppel Echo.** v2 can also be exported, but slight audio distortion may occur with whispering or certain vocal pitch ranges in the game. Test these conditions before uploading. Passing export validation does not guarantee in-game audio quality.
 
 - [한국어 사용 가이드](GUIDE.ko.md)
 - [English guide](GUIDE.en.md)
