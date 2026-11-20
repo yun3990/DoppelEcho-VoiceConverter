@@ -20,14 +20,18 @@ Training checkpoints such as `G_*.pth` and `D_*.pth`, non-f0 models, alternate `
 3. If Python is not detected, select the `python.exe` of a supported installation. If Python is not installed, cancel, install it, and try again.
 4. Wait for `Setup complete`. Packages are installed in this tool's `.venv` folder; the game's voice server environment is not changed.
 
+Setup displays its current step from `[1/5]` to `[5/5]`. Wait without pressing Enter during installation. When launched through `ONNX Export.bat`, setup is followed by `Press Enter to open the model selection window`. Click the console and press Enter to continue. If you ran `Setup.bat` separately, press Enter to close it, then run `ONNX Export.bat`.
+
 After setup, conversion works offline. Do not distribute or move an installed `.venv`. On another PC or in a new location, extract the original ZIP and run setup again.
 
 ## Convert a model
 
 1. Run `ONNX Export.bat`.
-2. Select your `.pth` in the input dialog.
+2. Wait for `READY` and `Press Enter to open the model selection window`, press Enter in the console, then select your `.pth` in the input dialog.
 3. Choose the output `.onnx` name and location. Replacing an existing file requires confirmation.
 4. Keep the console open until `Export and validation succeeded` appears. Processing time depends on your model and PC.
+
+After clicking `OK` in the success dialog, review the output and log paths in the console. Press Enter to close the console.
 
 The original `.pth` is never edited. An existing output is replaced only after export and validation succeed. Conversion logs are saved under `logs/export-*.log`.
 

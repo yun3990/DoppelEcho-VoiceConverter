@@ -21,15 +21,19 @@ RVC의 추론용 `.pth` 음성 모델을 도플 에코에서 사용하는 w-okad
 4. Python을 찾지 못하면 설치 안내가 나옵니다. 이미 설치했다면 파일 선택 창에서 해당 Python의 `python.exe`를 선택합니다. 없다면 취소하고 Python을 설치한 뒤 다시 실행하세요.
 5. 콘솔에 `Setup complete`가 나올 때까지 기다립니다. 도구 폴더의 `.venv`에 전용 패키지를 설치하며 게임의 음성 서버 환경은 수정하지 않습니다.
 
+설치 중에는 `[1/5]`부터 `[5/5]`까지 현재 단계가 표시됩니다. 이때는 Enter를 누르지 않고 기다리세요. `ONNX Export.bat`에서 설정이 끝나면 `Press Enter to open the model selection window`가 나옵니다. 콘솔을 클릭하고 Enter를 누르면 모델 선택 창이 열립니다. `Setup.bat`만 실행했다면 Enter로 창을 닫고 `ONNX Export.bat`을 실행하세요.
+
 설치 후에는 인터넷 없이 변환할 수 있습니다. 설치를 마친 폴더를 다른 PC로 복사하지 말고, 다른 PC에서는 원본 ZIP을 풀어 다시 설정하세요. 폴더 위치를 옮겨 실행이 안 되면 새 위치에 ZIP을 다시 풀고 설치합니다.
 
 ## 모델 변환하기
 
 1. `ONNX Export.bat`을 실행합니다.
-2. `Select RVC voice model` 창에서 `.pth`를 선택합니다.
+2. `READY`와 `Press Enter to open the model selection window` 안내가 나오면 콘솔에서 Enter를 누르고, `Select RVC voice model` 창에서 `.pth`를 선택합니다.
 3. 저장할 `.onnx`의 이름과 위치를 선택합니다. 기존 파일을 선택하면 덮어쓰기 확인이 나옵니다.
 4. 완료 창이 나올 때까지 콘솔을 닫지 마세요. 모델과 PC에 따라 시간이 걸립니다.
 5. `Export and validation succeeded`가 나오면 변환이 끝난 것입니다.
+
+완료 창에서 `OK`를 누른 뒤 콘솔에 표시된 저장 위치와 로그 경로를 확인하세요. Enter를 누르면 콘솔이 닫힙니다.
 
 원본 `.pth`는 수정하지 않습니다. 기존 출력 파일도 변환과 검증에 모두 성공한 뒤에만 교체합니다. 실패 원인은 도구 폴더의 `logs/export-날짜-시간.log`에 기록됩니다.
 
