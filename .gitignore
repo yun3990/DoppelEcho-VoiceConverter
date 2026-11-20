@@ -179,3 +179,14 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+# Doppel Echo converter local data
+.deps/
+logs/
+.setup.lock
+*.pth
+*.onnx
+*.index
+*.wav
+*.mp3
+*.zip
+*.zip.sha256

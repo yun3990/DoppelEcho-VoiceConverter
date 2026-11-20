@@ -1,0 +1,4 @@
+# CPU PyTorch is installed separately from https://download.pytorch.org/whl/cpu.
+numpy==1.26.4
+onnx==1.17.0
+onnxruntime==1.23.0

@@ -1,0 +1,15 @@
+{
+  "upstream": "https://github.com/w-okada/voice-changer",
+  "provenance": "Existing project w-okada snapshot, copied without modification for the RVC ONNX exporter",
+  "sha256": {
+    "LICENSE": "7cdb6ac05d6f29e421a6631046423cadd3f9ca881ca1fd69ddf71b72822a1078",
+    "LICENSE-NOTICE": "329f27feab0e3a9ab3a45d39ddd5f73982537e8f825713cb097bb12fa9fbae47",
+    "voice_changer/RVC/inferencer/rvc_models/infer_pack/attentions.py": "cd144aaa03a5d0b2624f32c675d51d336c535711f8d21ce111ace1671c77826b",
+    "voice_changer/RVC/inferencer/rvc_models/infer_pack/commons.py": "771d49e5cac60e0acab3cecf16bcd23861944cc15f8cfd319bf99a79b70b887b",
+    "voice_changer/RVC/inferencer/rvc_models/infer_pack/models.py": "bc496ca9212dbc66bd97624af98cca2c449d8c3a5c4ba81a688bf95936c942e9",
+    "voice_changer/RVC/inferencer/rvc_models/infer_pack/modules.py": "9bbc8d374d1bab21e64dc4a93ddc2bca91260aa4e9d7fd619d5f0dbb83ffe72f",
+    "voice_changer/RVC/inferencer/rvc_models/infer_pack/transforms.py": "e4b04cc746474f901553427978cb50686663bf68128dfbbe3239f22be90f0ae9",
+    "voice_changer/RVC/onnxExporter/SynthesizerTrnMs256NSFsid_ONNX.py": "bb2cad03d8f6f8ce95e1e48d6bc02fbef623144004242de69b84e2d14e4582c9",
+    "voice_changer/RVC/onnxExporter/SynthesizerTrnMs768NSFsid_ONNX.py": "d579d44c3ce6902661dc6994a6cbbcd51b043af56c02cca9e440ae5d7e38f8c8"
+  }
+}
