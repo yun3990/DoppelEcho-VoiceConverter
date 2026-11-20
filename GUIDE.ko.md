@@ -4,10 +4,12 @@ RVC의 추론용 `.pth` 음성 모델을 도플 에코에서 사용하는 w-okad
 
 ## 준비물
 
+**도플 에코용 모델은 RVC v1을 권장합니다.** v2도 변환할 수 있지만 현재 게임에서 음성이 깨지는 현상이 있어 실험용입니다. v2로 변환 검증을 통과하더라도 게임 내 음질이 정상이라는 뜻은 아닙니다.
+
 - Windows 10 또는 11, 64비트 PC. 변환은 CPU로 실행하며 NVIDIA GPU나 CUDA가 필요하지 않습니다.
 - [Python 공식 Windows 다운로드](https://www.python.org/downloads/windows/)에서 설치한 **Python 3.10, 3.11 또는 3.12의 Windows installer 64-bit**. Python 3.13 이상은 이 배포본의 지원 대상이 아닙니다. 설치 시 pip와 Python Launcher를 포함하세요.
 - 처음 설치할 때 인터넷 연결. 필요한 패키지를 PyPI와 PyTorch 공식 서버에서 받습니다. 설치 및 변환용 여유 공간을 수 GB 확보하세요.
-- 일반 RVC v1 또는 v2의 **f0가 포함된 추론용 `.pth`**. 샘플레이트는 32,000 / 40,000 / 48,000Hz를 지원합니다.
+- **RVC v1의 f0가 포함된 추론용 `.pth`를 권장**합니다. v2는 실험용 변환만 제공합니다. 변환기는 32,000 / 40,000 / 48,000Hz 모델을 처리합니다.
 
 학습 중 저장된 `G_*.pth`, `D_*.pth`, non-f0 모델, 별도 `params` 형식, 이미 변환된 `.onnx`는 입력으로 지원하지 않습니다. `.index`는 이 변환에 사용하지 않습니다. 도구에는 음성 모델이나 학습 데이터가 포함되어 있지 않습니다.
 
@@ -51,6 +53,7 @@ RVC의 추론용 `.pth` 음성 모델을 도플 에코에서 사용하는 w-okad
 | 패키지 다운로드 실패 | 인터넷 연결 확인 후 `Setup.bat` 재실행. `logs/setup-*.log` 확인 |
 | DLL load failed | Python 64비트 여부와 Microsoft Visual C++ x64 런타임 확인. 필요 시 [Microsoft 공식 안내](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) 이용 |
 | Runtime not ready | `Setup.bat`을 다시 실행하여 지정된 버전으로 설치 |
+| v2 모델은 변환에 성공했지만 게임에서 음성이 깨짐 | 현재 게임에서는 v1 권장. v1으로 학습·내보낸 원본 모델을 사용하고 실제 음질 확인. 파일 이름이나 버전 표시만 바꿔서는 v1으로 변환되지 않음 |
 | weight 또는 config가 없다는 오류 | 학습 체크포인트가 아닌 RVC의 추론용 모델을 내보내서 사용 |
 | Non-f0 또는 Unsupported 오류 | f0를 사용하는 일반 RVC v1/v2 모델인지 확인 |
 | weights_only 관련 오류 | 지원되지 않는 체크포인트 구조. 안전하지 않은 로딩 옵션으로 우회하지 말고 원본 도구에서 일반 추론용 모델로 다시 내보내기 |
